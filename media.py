@@ -1,11 +1,15 @@
 import webbrowser
 
 class Video():
+    """Parent class for TvShow() and Movie()"""
+
     def __init__(self, title, duration):
         self.title = title
         self.duration = duration
 
 class TvShow(Video):
+    """Video child class with season, episode, e.g. vars. Inherits title and duration."""
+
     def __init__(self, title, season, episode, tv_station):
         Video.__init__(self, title)
         self.season = season
@@ -16,7 +20,7 @@ class TvShow(Video):
         pass
 
 class Movie(Video):
-    """readme for movie class"""
+    """Video child class with storyline, trailer link, e.g vars. Inherits title and duration."""
 
     VALID_RATINGS = ["G", "PG", "R", "PG-13"]
 
